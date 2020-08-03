@@ -9,6 +9,7 @@ $(document).ready(function(){
                 required: true,
                 email: true
             },
+            senha: 'required'
         },
 
         messages: {
@@ -16,7 +17,8 @@ $(document).ready(function(){
             email: {
                 required: 'Campo Obrigatório.',
                 email: 'Digite um email válido'
-            }
+            },
+            senha: 'Campo Obrigatório. Digite a sua senha'
         },
         submitHandler: function(form){
             var data = $(form).serialize();

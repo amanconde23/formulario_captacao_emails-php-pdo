@@ -10,6 +10,7 @@
     <form id="formulario" action="../../cadastro.php" method="POST">
         Nome <input type="text" name="nome" id="nome"><br>
         Email <input type="text" name="email" id="email"><br>
+        Senha <input type="password" name="senha" id="senha"><br>
         <input type="submit" value="Enviar">
         <div id="erros"></div>
     </form>

@@ -4,13 +4,15 @@
     if(isset($_POST)){
         $nome = $_POST['nome'];
         $email = $_POST['email'];
+        $senha = $_POST['senha'];
         /* query insert no banco */
-        $query = "INSERT INTO cadastros (nome, email) VALUES (:nome, :email)";
+        $query = "INSERT INTO cadastros (nome, email, senha) VALUES (:nome, :email, :senha)";
         /* prepara conexao */
         $stmt = $conexao -> prepare ($query);
         /* bind liga o parametro com o valor recebido do formulario */
         $stmt -> bindValue(':nome', $nome);
         $stmt -> bindValue(':email', $email);
+        $stmt -> bindValue(':senha', $senha);
         /* executar a query */
         if($stmt -> execute()){
             echo json_encode(['status' => 1]);
